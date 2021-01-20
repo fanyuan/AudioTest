@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pinery.aidl.remote">
+
+  <application
+      android:allowBackup="true"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:supportsRtl="true"
+      android:theme="@style/AppTheme">
+    <activity android:name=".MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+
+    <service
+        android:name="com.pinery.aidl.remote.AIDLService"
+        android:exported="true"
+        android:process="com.pinery.aidl.remote_service">
+      <intent-filter>
+        <action android:name="com.pinery.aidl.action.AIDL_ACTION"/>
+      </intent-filter>
+    </service>
+
+    <provider
+        android:name="com.pinery.aidl.common.IPCContentProvider"
+        android:authorities="com.pinery.aidl_remote.provider.IPCContentProvider"
+        android:exported="true"/>
+
+  </application>
+
+</manifest>

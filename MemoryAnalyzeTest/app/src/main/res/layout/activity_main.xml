@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_test_leak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="测试存在内存泄露1" />
+
+    <Button
+        android:id="@+id/btn_test_no_leak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="测试内存泄露1解决" />
+
+    <View
+        android:layout_width="match_parent"
+        android:background="#77ffff00"
+        android:layout_marginTop="30dp"
+        android:layout_height="10dp"/>
+
+    <Button
+        android:id="@+id/btn_optimize_pre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="测试内存占用优化前" />
+
+    <Button
+        android:id="@+id/btn_optimize_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="测试内存占用优化后" />
+
+</LinearLayout>
